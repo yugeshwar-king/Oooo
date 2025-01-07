@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,11 +120,11 @@
         }
 
         .instagram {
-            margin-top: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
+            margin-top: 20px;
         }
 
         .instagram a {
@@ -142,39 +143,6 @@
 
         .instagram a:hover {
             color: #e63946;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
-        }
-
-        .modal img {
-            width: 70%;
-            max-width: 600px;
-            border-radius: 15px;
-        }
-
-        .modal.open {
-            display: flex;
-        }
-
-        .modal .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2em;
-            color: white;
-            cursor: pointer;
-            z-index: 3;
         }
     </style>
 </head>
@@ -197,12 +165,6 @@
         <h1>Suruchi, Will You Be Mine Forever?</h1>
         <p>You make my world brighter, and my heart beats for you. 💖</p>
         <button class="button" onclick="startAudio()">Yes, I Will!</button>
-        <--<div class="instagram">-->
-            <a href="https://www.instagram.com/your_profile" target="_blank">
-                <img src="asset/image/instagram_logo.png" alt="Instagram Logo">
-                Follow me on Instagram
-            </a>
-        </div>
     </div>
 
     <div id="imageModal" class="modal">
@@ -301,7 +263,7 @@
         function startAudio() {
             const audio = document.getElementById('backgroundMusic');
             audio.muted = false;
-            audio.play(); // Start the music upon user click
+            audio.play();
             const modal = document.getElementById('imageModal');
             modal.classList.add('open');
         }
@@ -310,9 +272,8 @@
             const modal = document.getElementById('imageModal');
             modal.classList.remove('open');
             alert('Suruchi, you are my everything! ❤');
-            
-            // Dynamically add Instagram link and logo
-            const container = document.querySelector('.container');
+
+            // Add Instagram link and logo dynamically
             const instagramDiv = document.createElement('div');
             instagramDiv.className = 'instagram';
             instagramDiv.innerHTML = `
@@ -321,10 +282,10 @@
                     Follow me on Instagram
                 </a>
             `;
-            container.appendChild(instagramDiv);
+            document.body.appendChild(instagramDiv);
         }
     </script>
 </body>
 
-    </html>
-    
+</html>
+
