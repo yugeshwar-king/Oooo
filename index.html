@@ -197,7 +197,7 @@
         <h1>Suruchi, Will You Be Mine Forever?</h1>
         <p>You make my world brighter, and my heart beats for you. 💖</p>
         <button class="button" onclick="startAudio()">Yes, I Will!</button>
-        <div class="instagram">
+        <--<div class="instagram">-->
             <a href="https://www.instagram.com/your_profile" target="_blank">
                 <img src="asset/image/instagram_logo.png" alt="Instagram Logo">
                 Follow me on Instagram
@@ -309,8 +309,22 @@
         function closeModal() {
             const modal = document.getElementById('imageModal');
             modal.classList.remove('open');
+            alert('Suruchi, you are my everything! ❤');
+            
+            // Dynamically add Instagram link and logo
+            const container = document.querySelector('.container');
+            const instagramDiv = document.createElement('div');
+            instagramDiv.className = 'instagram';
+            instagramDiv.innerHTML = `
+                <a href="https://www.instagram.com/your_profile" target="_blank">
+                    <img src="asset/image/instagram_logo.png" alt="Instagram Logo">
+                    Follow me on Instagram
+                </a>
+            `;
+            container.appendChild(instagramDiv);
         }
     </script>
 </body>
 
-</html>
+    </html>
+    
